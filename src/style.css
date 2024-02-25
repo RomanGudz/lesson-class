@@ -1,0 +1,134 @@
+body {
+  margin:0px;
+  height:100vh;
+  background: #1283da;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+.center {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height: 100%;
+  
+}
+
+ul {
+  list-style: none;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.petrol {
+  list-style-image: url(assets/img/icon-park_petrol.svg);
+  list-style-type: '👉';
+  padding-inline-start: 1ch;
+}
+
+.diesel {
+  list-style-image: url(assets/img/icon-park-outline_petrol.svg);
+}
+
+.passanger {
+  padding-left: 20px;
+  background-image: url(assets/img/clarity_car-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.truck {
+  padding-left: 20px;
+  background-image: url(assets/img/bxs_truck.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.form-input {
+  width:600px;
+  padding:20px;
+  background:#fff;
+  box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+    3px 3px 7px rgba(94, 104, 121, 0.377);
+}
+
+.preview {
+  width:100%;
+  display:none;
+  margin-bottom:30px;
+}
+
+.file {
+  display:none;
+}
+
+.label {
+  display:block;
+  width:45%;
+  height:45px;
+  margin-left: 25%;
+  line-height:50px;
+  text-align:center;
+  background:#1172c2;
+  color:#fff;
+  font-size:15px;
+  font-family:"Open Sans",sans-serif;
+  text-transform:Uppercase;
+  font-weight:600;
+  border-radius:5px;
+  cursor:pointer;
+  margin-bottom: 30px;
+}
+
+h1 {
+  text-align:center;
+  color:#fff;
+  font-family:"Open Sans",sans-serif;
+  text-transform:Uppercase;
+  font-weight:900;
+  margin-bottom: 50px;
+}
+
+
+.btn {
+  display:block;
+  width:300px;
+  height:45px;
+  margin: 0 auto 20px;
+  line-height:50px;
+  text-align:center;
+  background-color:#1172c2;
+  color:#fff;
+  font-size:15px;
+  font-family:"Open Sans",sans-serif;
+  text-transform:Uppercase;
+  font-weight:600;
+  border-radius:5px;
+  cursor:pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color:#1172ff;
+
+}
+.btn:active {
+  background-color:#11cccc;
+  transform: translateY(2px);
+}
+
+.btn:disabled {
+  background:#6699ff;
+  opacity: 0.4;
+  cursor: auto;
+}
+
+.car {
+  display: none;
+}
