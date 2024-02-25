@@ -20,12 +20,7 @@ export class Station {
   }
 
   init() {
-    for (const optionsStation of this.typeStation) {
-      for (let i = 0; i < optionsStation.count; i++) {
-        this.#filling.push(new Column(optionsStation.type,
-          optionsStation.speed));
-      }
-    }
+    this.createColumn();
 
     if (this.renderApp) {
       this.renderStation = new RenderStation(this.renderApp, this);
@@ -34,6 +29,20 @@ export class Station {
     setInterval(() => {
       this.checkQueueToFilling();
     }, 2000);
+  }
+
+  createColumn() {
+    for (const optionsStation of this.typeStation) {
+      if (optionsStation.count === undefined ||
+        optionsStation.speed === undefined) {
+        optionsStation.speed = 5;
+        optionsStation.count = 1;
+      }
+      for (let i = 0; i < optionsStation.count; i++) {
+        this.#filling.push(new Column(optionsStation.type,
+          optionsStation.speed));
+      }
+    }
   }
 
   checkQueueToFilling() {

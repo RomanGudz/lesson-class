@@ -10,7 +10,9 @@ const car = document.querySelector('.car');
 
 const testArray = {
   passangerCar: [
-    ['Opel', 'Crossland', 45],
+    ['Газель', 'Crossland', 80, 'gas'],
+    ['Нива', '4х4', 70, 'gas'],
+    ['Семерка', 'Crossland', 45, 'gas'],
     ['Opel', 'Grandland X', 53],
     ['Mazda', 'cx-5', 55],
     ['BMW', 'M5', 68],
@@ -40,13 +42,18 @@ const getTestCar = () => {
 const station = new Station([
   {
     type: 'petrol',
-    // count: 3,
-    // speed: 5,
+    count: 3,
+    speed: 5,
   },
   {
     type: 'diesel',
-    // count: 2,
-    // speed: 10,
+    count: 2,
+    speed: 10,
+  },
+  {
+    type: 'gas',
+    count: 2,
+    speed: 15,
   },
 ], '.app');
 
